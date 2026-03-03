@@ -259,19 +259,19 @@ def main():
 
     styles = load_json("configs/styles.json")
     categories = load_json("configs/categories.json")
-    prompts = load_json("configs/prompts.json")["sections"]["synthetic_eval"]
+    prompts = load_json("configs/prompts.json")["sections"]["synthetic"]
 
     plan = [
-        dict(group_total=300, prompt_key="benign_request_only", scenario="benign_request_only", label=0),
-        dict(group_total=600, prompt_key="benign_request_borderline_response", scenario="benign_request_borderline_response", label=0),
+        dict(group_total=0, prompt_key="benign_request_only", scenario="benign_request_", label=0),
+        dict(group_total=0, prompt_key="benign_request_borderline_response", scenario="benign_single_turn", label=0),
         dict(group_total=0, prompt_key="harmful_request_refusal_response", scenario="benign_single_turn", label=0),
-        dict(group_total=900, prompt_key="benign_request_benign_response", scenario="benign_request_benign_response", label=0),
-        dict(group_total=0, prompt_key="harmful_request_only", scenario="harmful_request_only", label=1),
-        dict(group_total=0, prompt_key="benign_request_rogue_response", scenario="benign_request_rogue_response", label=1),
-        dict(group_total=0, prompt_key="harmful_request_partial_compliance_response", scenario="harmful_request_partial_compliance_response", label=1),
-        dict(group_total=0, prompt_key="harmful_request_compliance_response", scenario="harmful_request_compliance_response", label=1),
-        dict(group_total=0, prompt_key="protected_speech_request_only", scenario="protected_speech_request_only", label=0),
-        dict(group_total=0, prompt_key="protected_request_protected_speech_response", scenario="protected_request_protected_speech_response", label=0),
+        dict(group_total=0, prompt_key="benign_request_benign_response", scenario="benign_single_turn", label=0),
+        dict(group_total=0, prompt_key="harmful_request_only", scenario="harmful_request", label=1),
+        dict(group_total=0, prompt_key="benign_request_rogue_response", scenario="harmful_single_turn", label=1),
+        dict(group_total=0, prompt_key="harmful_request_partial_compliance_response", scenario="harmful_single_turn", label=1),
+        dict(group_total=0, prompt_key="harmful_request_compliance_response", scenario="harmful_single_turn", label=1),
+        dict(group_total=0, prompt_key="protected_speech_request_only", scenario="benign_request", label=0),
+        dict(group_total=0, prompt_key="protected_request_protected_speech_response", scenario="benign_single_turn", label=0),
     ]
 
     desired_by_scenario = {row["scenario"]: row["group_total"] for row in plan}
@@ -280,7 +280,7 @@ def main():
     errors_by_scenario_category = Counter()
 
     dataset: List[Dict[str, Any]] = []
-    pbar = tqdm(total=1800, desc="Generating raw dataset")
+    pbar = tqdm(total=150, desc="Generating raw dataset")
 
     def add_group(group_total: int, prompt_key: str, label: int, scenario: str):
         nonlocal dataset
@@ -298,7 +298,7 @@ def main():
                 label=label,
                 scenario=scenario,
                 batch_size=5,
-                model="sao10k/l3-lunaris-8b", #mistralai/mistral-nemo, #sao10k/l3-lunaris-8b
+                model="mistralai/mistral-nemo", #sao10k/l3-lunaris-8b
                 logger=logger,
                 error_counter=errors_by_scenario_category,
                 dropped_counter=dropped_by_scenario,
@@ -323,7 +323,7 @@ def main():
 
     random.shuffle(dataset)
 
-    out_path = "data/benign_eval_lunaris.json"
+    out_path = "BORDERLINE1.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(dataset, f, ensure_ascii=False, indent=2)
 

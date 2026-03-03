@@ -13,7 +13,7 @@ def call_model(prompt, model, temperature, max_tokens):
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
         "Content-Type": "application/json",
-        "HTTP-Referer": "http://localhost",   # required by OpenRouter policy in many cases
+        "HTTP-Referer": "http://localhost", 
         "X-Title": "grayswan_assessment"
     }
 
@@ -28,7 +28,7 @@ def call_model(prompt, model, temperature, max_tokens):
 
     if r.status_code != 200:
         print("STATUS:", r.status_code)
-        print("BODY:", r.text)   # <-- this will tell you exactly what's wrong
+        print("BODY:", r.text) 
         r.raise_for_status()
 
     data = r.json()

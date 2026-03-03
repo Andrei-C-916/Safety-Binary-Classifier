@@ -1,0 +1,60 @@
+2026-03-03 02:10:46,423 | Starting training
+2026-03-03 02:13:09,433 | 
+epoch=1 step=200 train_loss=0.3574 val_loss=0.3097
+2026-03-03 02:13:10,127 | saved best_model.pt
+2026-03-03 02:15:28,623 | 
+epoch=1 step=400 train_loss=0.3009 val_loss=0.1506
+2026-03-03 02:15:29,554 | saved best_model.pt
+2026-03-03 02:17:44,969 | 
+epoch=1 step=600 train_loss=0.2727 val_loss=0.1806
+2026-03-03 02:19:59,194 | 
+epoch=1 step=800 train_loss=0.2483 val_loss=0.1201
+2026-03-03 02:20:00,166 | saved best_model.pt
+2026-03-03 02:22:14,505 | 
+epoch=1 step=1000 train_loss=0.2374 val_loss=0.1495
+2026-03-03 02:24:32,677 | 
+epoch=1 step=1200 train_loss=0.2264 val_loss=0.1469
+2026-03-03 02:26:49,383 | 
+epoch=1 step=1400 train_loss=0.2171 val_loss=0.1344
+2026-03-03 02:28:21,334 | 
+epoch_end=1 train_loss=0.2149 val_loss=0.1544
+2026-03-03 02:28:22,026 | saved checkpoint_epoch_1.pt
+2026-03-03 02:29:40,008 | 
+epoch=2 step=1600 train_loss=0.0988 val_loss=0.1468
+2026-03-03 02:31:59,683 | 
+epoch=2 step=1800 train_loss=0.1113 val_loss=0.1369
+2026-03-03 02:34:16,830 | 
+epoch=2 step=2000 train_loss=0.1146 val_loss=0.2691
+2026-03-03 02:36:31,804 | 
+epoch=2 step=2200 train_loss=0.1122 val_loss=0.2330
+2026-03-03 02:38:48,812 | 
+epoch=2 step=2400 train_loss=0.1148 val_loss=0.1131
+2026-03-03 02:38:49,669 | saved best_model.pt
+2026-03-03 02:41:06,872 | 
+epoch=2 step=2600 train_loss=0.1197 val_loss=0.1899
+2026-03-03 02:43:27,126 | 
+epoch=2 step=2800 train_loss=0.1187 val_loss=0.1305
+2026-03-03 02:45:46,719 | 
+epoch=2 step=3000 train_loss=0.1184 val_loss=0.1763
+2026-03-03 02:46:27,854 | 
+epoch_end=2 train_loss=0.1189 val_loss=0.1253
+2026-03-03 02:46:28,543 | saved checkpoint_epoch_2.pt
+2026-03-03 02:48:32,406 | 
+epoch=3 step=3200 train_loss=0.0795 val_loss=0.1387
+2026-03-03 02:50:47,560 | 
+epoch=3 step=3400 train_loss=0.0804 val_loss=0.1730
+2026-03-03 02:53:07,056 | 
+epoch=3 step=3600 train_loss=0.0790 val_loss=0.1267
+2026-03-03 02:55:26,603 | 
+epoch=3 step=3800 train_loss=0.0770 val_loss=0.1434
+2026-03-03 02:57:45,388 | 
+epoch=3 step=4000 train_loss=0.0801 val_loss=0.1661
+2026-03-03 03:00:01,926 | 
+epoch=3 step=4200 train_loss=0.0804 val_loss=0.2589
+2026-03-03 03:02:19,637 | 
+epoch=3 step=4400 train_loss=0.0808 val_loss=0.2325
+2026-03-03 03:04:01,109 | 
+epoch_end=3 train_loss=0.0814 val_loss=0.1692
+2026-03-03 03:04:01,807 | saved checkpoint_epoch_3.pt
+2026-03-03 03:04:01,807 | 
+done. best_val_loss=0.1131

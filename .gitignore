@@ -20,3 +20,4 @@ refusal_synthetic_mistral.json
 refusal_synthetic_lunaris.json
 refusal_eval_mistral.json
 refusal_eval_lunaris.json
+benign_eval_lunaris.json
