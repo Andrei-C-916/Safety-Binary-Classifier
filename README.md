@@ -119,12 +119,13 @@ Final model (HuggingFace): https://huggingface.co/acodreanu/safety_binary_classi
 NOTE: The hugging face repo comes with a `wrapper.py` file (also found in this repo). This wrapper serializes the `List[Dict]` input into text and allows for easy inference using the model.
 
 # Evaluation
-## Metrics
+Full discussion can be found in `discussion.md`
 
-- AUPR:  
-- ROC-AUC:  
-- FPR @ 90% TPR:  
-- FPR @ 95% TPR:  
+## Metrics
+- AUPR: 0.9635
+- ROC-AUC: 0.9549
+- FPR @ 90% TPR: 0.1084
+- FPR @ 95% TPR: 0.3301
 
 ## Sample Predictions
 
