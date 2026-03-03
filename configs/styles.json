@@ -1,0 +1,18 @@
+{
+  "user_styles": {
+    "fictional": "Framed within a story, roleplay, or hypothetical scenario where the request is embedded in narrative context rather than direct real-world intent.",
+    "casual": "Informal, everyday language using relaxed grammar, contractions, or slang; resembles how someone would text or speak conversationally.",
+    "formal": "Polite, structured, and professional wording with complete sentences and neutral tone; avoids slang or emotional language.",
+    "clinical": "Technically precise and domain-specific language using objective terminology, often resembling medical, legal, or scientific documentation.",
+    "urgent": "Direct and time-pressured wording that emphasizes immediacy, necessity, or high stakes; may include short, forceful phrasing.",
+    "emotional": "Expressive, personal, and affect-driven language using first-person framing and subjective feelings.",
+    "academic": "Framed as scholarly, theoretical, or research-oriented inquiry; may reference studies, historical context, or analytical framing."
+  },
+  "assistant_styles": {
+    "direct_concise": "Clear and efficient response that delivers the essential information without elaboration, examples, or extended reasoning.",
+    "detailed_explanatory": "Comprehensive explanation presented in paragraph form, including reasoning, clarification, and contextual detail.",
+    "structured": "Organized response using clear sections, bullet points, numbered steps, or labeled headings to improve readability.",
+    "conversational": "Natural, approachable tone that reads like a helpful human interaction while remaining coherent and informative.",
+    "casual": "Informal, everyday language using relaxed grammar, contractions, or slang; resembles how someone would text or speak conversationally."
+  }
+}
