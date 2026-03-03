@@ -88,7 +88,7 @@ We also chose cosafe categories that weren't part of our policy. These included 
 Generation prompts and code can be found in `configs/prompts.json` and `generate_data/generate_cosafe.py`
 
 ### Everyday Conversations
-These conversations were taken from `https://huggingface.co/datasets/HuggingFaceTB/everyday-conversations-llama3`. They are dialogues about everyday topics between a user and an ai.
+These conversations were taken from https://huggingface.co/datasets/HuggingFaceTB/everyday-conversations-llama3. They are dialogues about everyday topics between a user and an ai.
 
 No LLM generation was used to augment this data. The only augmentation was removing the first user request and the first assistant response, which were always the same greetings.
 
