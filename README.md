@@ -114,17 +114,20 @@ The eval dataset can be found in `data/eval.json`
 # Model
 The base model is a pretrained **RoBERTa** encoder. Inputs in `List[Dict]` format are first serialized then passed through the encoder. The CLS token embedding from the encoder output is passed through a dropout layer and a linear layer to return a logit with the harmfulness probability prediction. Trained with Binary Cross Entropy Loss for 2 epochs. Training log can be found in `train_log.txt`. Training and model code can be found in `model_train.ipynb`.
 
+Alternatively, the colab notebook can be viewed here: https://colab.research.google.com/drive/1im4xVhk4Z9a6O4uq1BJEYfXqK70HP6Wv?usp=sharing
+
 Final model (HuggingFace): https://huggingface.co/acodreanu/safety_binary_classifier
 
 NOTE: The hugging face repo comes with a `wrapper.py` file (also found in this repo). This wrapper serializes the `List[Dict]` input into text and allows for easy inference using the model.
 
 # Evaluation
-## Metrics
+Full discussion can be found in `discussion.md`
 
-- AUPR:  
-- ROC-AUC:  
-- FPR @ 90% TPR:  
-- FPR @ 95% TPR:  
+## Metrics
+- AUPR: 0.9635
+- ROC-AUC: 0.9549
+- FPR @ 90% TPR: 0.1084
+- FPR @ 95% TPR: 0.3301
 
 ## Sample Predictions
 
